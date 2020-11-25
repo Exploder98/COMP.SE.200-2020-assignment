@@ -32,16 +32,17 @@ Testit saa ajettua komennolla:
 
 ```npm test```
 
+## Testiautomaatio
 
 Testikattavuuden tämänhetkinen tila Coverallsin mukaan:
 
 [![Coverage Status](https://coveralls.io/repos/github/Exploder98/COMP.SE.200-2020-assignment/badge.svg?branch=master)](https://coveralls.io/github/Exploder98/COMP.SE.200-2020-assignment?branch=master)
 
-Pipelinen status Travis-CI:ssä
+Pipelinen status Travis-CI:ssä:
 
 [![Build Status](https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment.svg?branch=master)](https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment)
 
-Repositorion muokkaajat:
+## Repositorion muokkaajat
 
 Esko Toivonen (repositorion omistaja)
 ja
