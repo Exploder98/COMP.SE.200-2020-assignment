@@ -26,7 +26,7 @@ Varsinaiset testikooditiedostot sijaitsevat hakemistossa
 
 Testauksessa käytettävät paketit voi asentaa komennolla:
 
-```npm-install```
+```npm install```
 
 Testit saa ajettua komennolla:
 
