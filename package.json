@@ -21,6 +21,9 @@
   "jest": {
     "setupFilesAfterEnv": [
       "jest-chain"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js"
     ]
   }
 }
