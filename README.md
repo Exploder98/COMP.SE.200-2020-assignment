@@ -1,13 +1,48 @@
-# Student template
+# COMP.SE.200 Software testing -harjoitustyörepositorio
 
-## Purpose of this repository
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Exploder98/COMP.SE.200-2020-assignment/master/figures/logo.svg" width="256" title="Logo &copy; Eerik Voimanen">
+    </br>
+    <a href="https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment">
+        <img src="https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment.svg?branch=master">
+    </a>
+    <a href="https://coveralls.io/github/Exploder98/COMP.SE.200-2020-assignment?branch=master">
+        <img src="https://coveralls.io/repos/github/Exploder98/COMP.SE.200-2020-assignment/badge.svg?branch=master">
+    </a>
+</p>
 
-This is a project template for students participating in Software Testing course
-at Tampere University.
+## Repositorion tarkoitus
 
-The repository only contains the source code that is under testing, `package.json` skeleton
-and LICENSE file.
+Tässä repositoriossa on tarkoitus testata `src`-kansiosta löytyvät `.js`-tiedostot. (ei `src/.internal`-kansion sisältöjä)
 
-Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
-Removing this license file directly violates terms and conditions of the software under testing.
-Individuals who remove or modify the license file will also carry the consequences.
+Lähdekoodikansio sisältää erillisen lisenssitiedoston, jota **ei saa** poistaa missään tilanteessa!
+Kyseisen lisenssitiedoston poistaminen rikkoo suoraan testattavan ohjelmiston lisenssin ehtoja.
+Lisenssitiedoston muokkaaminen tai poistaminen aiheuttaa seuraamuksia.
+
+## Testien ajaminen
+
+Varsinaiset testikooditiedostot sijaitsevat hakemistossa
+`test`.
+
+Testauksessa käytettävät paketit voi asentaa komennolla:
+
+```npm-install```
+
+Testit saa ajettua komennolla:
+
+```npm test```
+
+
+Testikattavuuden tämänhetkinen tila Coverallsin mukaan:
+
+[![Coverage Status](https://coveralls.io/repos/github/Exploder98/COMP.SE.200-2020-assignment/badge.svg?branch=master)](https://coveralls.io/github/Exploder98/COMP.SE.200-2020-assignment?branch=master)
+
+Pipelinen status Travis-CI:ssä
+
+[![Build Status](https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment.svg?branch=master)](https://travis-ci.com/Exploder98/COMP.SE.200-2020-assignment)
+
+Repositorion muokkaajat:
+
+Esko Toivonen (repositorion omistaja)
+ja
+Eerik Voimanen
