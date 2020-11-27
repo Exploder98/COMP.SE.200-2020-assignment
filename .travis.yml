@@ -5,4 +5,7 @@ node_js:
 jobs:
   include:
     - stage: Coverage
-      script: jest --coverage && coveralls < coverage/lcov.info
+      script: 
+        - |
+          jest --coverage
+          coveralls < coverage/lcov.info
