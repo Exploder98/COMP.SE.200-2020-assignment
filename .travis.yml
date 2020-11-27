@@ -6,6 +6,5 @@ jobs:
   include:
     - stage: Coverage
       script: 
-        - |
-          jest --coverage
-          coveralls < coverage/lcov.info
+        - jest --coverage
+        - coveralls < coverage/lcov.info
