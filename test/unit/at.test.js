@@ -6,7 +6,7 @@
  * @group unit
  */
 
-import at from "../src/at.js";
+import at from "../../src/at.js";
 
 describe("unit/at", () => {
     it("Tyhjä objekti ja polku", () => {

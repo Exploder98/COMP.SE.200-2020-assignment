@@ -6,7 +6,7 @@
  * @group unit
  */
 
-import divide from "../src/divide.js";
+import divide from "../../src/divide.js";
 
 
 describe("unit/divide", () => {

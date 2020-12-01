@@ -6,7 +6,7 @@
  * @group unit
  */
 
-import add from "../src/add.js";
+import add from "../../src/add.js";
 
 
 const MAX_INTEGER = 1.7976931348623157e+308;
