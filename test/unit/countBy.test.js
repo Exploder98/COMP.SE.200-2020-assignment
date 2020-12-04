@@ -1,7 +1,7 @@
 /**
- * countBy-funktion integraatiotestit
+ * countBy-funktion yksikkötestit
  *
- * @group integration
+ * @group unit
  */
 
 import countBy from "../../src/countBy.js";
