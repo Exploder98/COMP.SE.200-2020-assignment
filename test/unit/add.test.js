@@ -1,5 +1,3 @@
-/* jshint esversion: 6 */
-
 /**
  * add-funktion yksikkötestit
  *

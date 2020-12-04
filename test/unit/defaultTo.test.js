@@ -1,5 +1,3 @@
-/* jshint esversion: 6 */
-
 /**
  * defaultTo-funktion yksikkötestit
  *

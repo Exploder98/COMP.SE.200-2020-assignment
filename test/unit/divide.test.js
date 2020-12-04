@@ -1,5 +1,3 @@
-/* jshint esversion: 6 */
-
 /**
  * divide-funktion yksikkötestit
  *
