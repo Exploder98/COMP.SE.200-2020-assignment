@@ -7,7 +7,7 @@
 import filter from "../../src/filter.js";
 
 
-describe("unit/every", () => {
+describe("unit/filter", () => {
     it("[{ \'user\': \'barney\', \'active\': true }, { \'user\': \'fred\',   \'active\': false }], ({ active }) => active -> [{ 'user': 'barney', 'active': true }]", () => {
         expect(filter([{ 'user': 'barney', 'active': true },{ 'user': 'fred',   'active': false }], ({ active }) => active))
             .toStrictEqual([{ 'user': 'barney', 'active': true }]);
