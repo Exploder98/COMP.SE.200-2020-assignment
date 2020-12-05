@@ -28,7 +28,7 @@ describe("integration/isBoolean", () => {
             .toBe(true);
     });
     
-    it("{true} -> false", () => {
+    it("{true: true} -> false", () => {
         expect(isBoolean({true: true}))
             .toBe(false);
     });
