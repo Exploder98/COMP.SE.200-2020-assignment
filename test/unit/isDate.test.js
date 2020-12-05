@@ -22,12 +22,12 @@ describe("unit/isDate", () => {
             .toBe(true);
     });
 
-    it("new Date -> true", () => {
-        expect(isDate(new Date()))
+    it("new Date -> true (dokumentaatioesimerkki)", () => {
+        expect(isDate(new Date))
             .toBe(true);
     });
 
-    it("\"Mon April 23 2012\" -> false", () => {
+    it("\"Mon April 23 2012\" -> false (dokumentaatioesimerkki)", () => {
         expect(isDate("Mon April 23 2012"))
             .toBe(false);
     });
