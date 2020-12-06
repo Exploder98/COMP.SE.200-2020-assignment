@@ -15,13 +15,14 @@ jest.mock("../../src/isSymbol.js");
 
 
 describe("unit/toNumber", () => {
+    isSymbol.mockReturnValue(false);
+    isObject.mockReturnValue(false);
+
     it("42 -> 42", () => {
         expect(toNumber(42))
             .toBe(42);
     });
 
-    isSymbol.mockReturnValueOnce(false);
-    isObject.mockReturnValueOnce(false);
     it("new Number(42) -> 42", () => {
         expect(toNumber(new Number(42)))
             .toBe(42);
@@ -37,14 +38,11 @@ describe("unit/toNumber", () => {
             .toBe(Infinity);
     });
 
-    isSymbol.mockReturnValueOnce(false);
-    isObject.mockReturnValueOnce(false);
     it("\"3.2\"-> 3.2", () => {
         expect(toNumber("3.2"))
             .toBe(3.2);
     });
-    isSymbol.mockReturnValueOnce(false);
-    isObject.mockReturnValueOnce(false);
+
     it("\"           3.2           \"-> 3.2", () => {
         expect(toNumber("           3.2           "))
             .toBe(3.2);
@@ -75,8 +73,8 @@ describe("unit/toNumber", () => {
             .toBe(42);
     });
 
-    isSymbol.mockReturnValueOnce(true);
     it("Symbol(\"a\")-> NaN", () => {
+        isSymbol.mockReturnValueOnce(true);
         expect(toNumber(Symbol("a")))
             .toBe(NaN);
     });
@@ -105,9 +103,9 @@ describe("unit/toNumber", () => {
         expect(toNumber(false))
             .toBe(0);
     });
-    isSymbol.mockReturnValueOnce(false);
-    isObject.mockReturnValueOnce(true);
+
     it("{}-> NaN", () => {
+        isObject.mockReturnValueOnce(true);
         expect(toNumber({}))
             .toBe(NaN);
     });
