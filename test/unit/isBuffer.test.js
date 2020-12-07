@@ -34,7 +34,7 @@ describe("unit/isBuffer", () => {
     });
 
     it("NaN -> false", () => {
-        expect(isBuffer(Nan))
+        expect(isBuffer(NaN))
             .toBe(false);
     });
 
