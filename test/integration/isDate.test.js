@@ -7,7 +7,7 @@
 import isDate from "../../src/isDate.js";
 
 
-// jest.mock("../../src/.internal/nodeTypes.js", () => ({isDate: false}));
+jest.mock("../../src/.internal/nodeTypes.js", () => ({isDate: false}));
 
 
 describe("integration/isDate", () => {
