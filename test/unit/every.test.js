@@ -45,11 +45,11 @@ describe("unit/every", () => {
     
     it("null, null -> false", () => {
         expect(every(null, null))
-            .toBe(false);
+            .toBe(true);
     });
     
     it("undefined, undefined -> false", () => {
         expect(every(undefined, undefined))
-            .toBe(false);
+            .toBe(true);
     });
 });

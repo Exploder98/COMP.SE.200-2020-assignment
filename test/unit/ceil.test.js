@@ -37,7 +37,7 @@ describe("unit/ceil", () => {
             .toStrictEqual(NaN);
     });
 
-    it("null, -> NaN", () => {
+    it("null, -> 0", () => {
         expect(ceil(null))
             .toBe(0);
     });
