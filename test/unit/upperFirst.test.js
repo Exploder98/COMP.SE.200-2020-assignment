@@ -23,19 +23,19 @@ describe("unit/upperFirst", () => {
             .toBe("42onvastaus");
     });
 
-    it("null -> \"Null\"", () => {
+    it("null -> \"\"", () => {
         expect(upperFirst(null))
-            .toBe("Null");
+            .toBe("");
     });
 
-    it("undefined -> \"Undefined\"", () => {
+    it("undefined -> \"\"", () => {
         expect(upperFirst(undefined))
-            .toBe("Undefined");
+            .toBe("");
     });
 
-    it("NaN -> \"NaN\"", () => {
+    it("NaN -> \"\"", () => {
         expect(upperFirst(NaN))
-            .toBe("NaN");
+            .toBe("");
     });
 
     it("{} -> [object Object]", () => {
