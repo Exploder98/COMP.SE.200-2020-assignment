@@ -32,6 +32,14 @@ Testit saa ajettua komennolla:
 
 ```npm test```
 
+Mikäli haluaa testitulokset kompaktimpana listana, voi suorittaa komennon:
+
+```npm run test-compact```
+
+Lisäksi HTML-muotoisen testiraportin (`test-report.html`) voi generoida komennolla:
+
+```npm run test-html```
+
 ## Testiautomaatio
 
 Testikattavuuden tämänhetkinen tila Coverallsin mukaan:
