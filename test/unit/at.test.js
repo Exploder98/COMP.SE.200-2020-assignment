@@ -9,7 +9,7 @@ import at from "../../src/at.js";
 describe("unit/at", () => {
     it("Tyhjä objekti ja polku", () => {
         expect(at({}, ""))
-            .toStrictEqual([]);
+            .toStrictEqual([undefined]);
     });
 
     it("Indeksointi objektiin, avain löytyy", () => {
@@ -19,12 +19,12 @@ describe("unit/at", () => {
 
     it("Indeksoi objektiin, avainta ei löydy", () => {
         expect(at({"a": 1}, "b"))
-            .toStrictEqual([]);
+            .toStrictEqual([undefined]);
     });
 
     it("Indeksoi objektiin listan indeksointisyntaksilla", () => {
         expect(at({"a": 1}, "[0]"))
-            .toStrictEqual([]);
+            .toStrictEqual([undefined]);
     });
 
     it("Indeksoi listaan, indeksi löytyy", () => {
@@ -39,7 +39,7 @@ describe("unit/at", () => {
 
     it("Indeksoi listaan listaindeksillä ja olioindeksillä, olioindeksiä ei löyty", () => {
         expect(at([1, 2, 3, 42, 5], ["[3]", "a"]))
-            .toStrictEqual([42]);
+            .toStrictEqual([42, undefined]);
     });
 
     it("Indeksoi objektiin 2 kertaa, molemmat löytyvät", () => {
@@ -52,6 +52,6 @@ describe("unit/at", () => {
                 "kaikkeen": 7,
                 "vastaus": 42
             }, ["vastaus", "[0]"]))
-            .toStrictEqual([42]);
+            .toStrictEqual([42, undefined]);
     });
 });
