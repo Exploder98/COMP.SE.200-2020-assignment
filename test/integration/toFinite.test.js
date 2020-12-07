@@ -28,11 +28,6 @@ describe("integration/toFinite", () => {
             .toBe(3.2);
     });
 
-    it("\"two\" -> 2", () => {
-        expect(toFinite("two"))
-            .toBe(2);
-    });
-
     it("\"a\" -> 0", () => {
         expect(toFinite("a"))
             .toBe(0);

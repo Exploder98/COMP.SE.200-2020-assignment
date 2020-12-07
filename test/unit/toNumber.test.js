@@ -53,11 +53,6 @@ describe("unit/toNumber", () => {
             .toBe(3.2);
     });
 
-    it("\"two\"-> 2", () => {
-        expect(toNumber("two"))
-            .toBe(2);
-    });
-
     it("\"0x2A\"-> 42", () => {
         expect(toNumber("0X2A"))
             .toBe(42);

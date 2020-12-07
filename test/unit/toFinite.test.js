@@ -31,11 +31,7 @@ describe("unit/toFinite", () => {
         expect(toFinite("3.2"))
             .toBe(3.2);
     });
-    toNumber.mockReturnValueOnce(2);
-    it("\"two\" -> 2", () => {
-        expect(toFinite("two"))
-            .toBe(2);
-    });
+
     toNumber.mockReturnValueOnce(0);
     it("\"a\" -> 0", () => {
         expect(toFinite("a"))

@@ -36,12 +36,6 @@ describe("unit/toInteger", () => {
             .toBe(49);
     });
 
-    toFinite.mockReturnValueOnce(2);
-    it("\"two\" -> 2", () => {
-        expect(toInteger("two"))
-            .toBe(2);
-    });
-
     toFinite.mockReturnValueOnce(1.7976931348623157e+308);
     it("Infinity -> 1.7976931348623157e+308", () => {
         expect(toInteger(Infinity))

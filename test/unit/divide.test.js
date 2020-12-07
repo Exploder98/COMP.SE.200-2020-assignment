@@ -24,10 +24,7 @@ describe("unit/divide", () => {
         expect(divide(-6, -4))
             .toBeCloseTo(1.5);
     });
-    it("\"two\" / \"one\" = \"two\"", () => {
-        expect(divide("two", "one"))
-            .toBe("one");
-    });
+
     it("1 / 0 = Infinity", () => {
         expect(divide(1, 0))
             .toBeCloseTo(Infinity);

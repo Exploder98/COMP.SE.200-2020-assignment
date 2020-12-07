@@ -18,7 +18,7 @@ describe("unit/chunk", () => {
             .toStrictEqual([["a"], ["b"], ["c"], ["d"]]);
     });
 
-    toInteger.mockReturnValueOnce(2).mockReturnValueOnce(2).mockReturnValueOnce(2).mockReturnValueOnce(2);
+    toInteger.mockReturnValueOnce(2).mockReturnValueOnce(2).mockReturnValueOnce(2);
     it("[\"a\", \"b\", \"c\", \"d\"], 2 -> [[\"a\", \"b\"], [\"c\", \"d\"]]", () => {
         expect(chunk(["a", "b", "c", "d"], 2 ))
             .toStrictEqual([["a", "b"], ["c", "d"]]);
@@ -31,11 +31,6 @@ describe("unit/chunk", () => {
 
     it("[\"a\", \"b\", \"c\", \"d\"], \"2\" -> [[\"a\", \"b\"], [\"c\", \"d\"]]", () => {
         expect(chunk(["a", "b", "c", "d"], "2" ))
-            .toStrictEqual([["a", "b"], ["c", "d"]]);
-    });
-
-    it("[\"a\", \"b\", \"c\", \"d\"], \"kaksi\" -> [[\"a\", \"b\"], [\"c\", \"d\"]]", () => {
-        expect(chunk(["a", "b", "c", "d"], "kaksi" ))
             .toStrictEqual([["a", "b"], ["c", "d"]]);
     });
 

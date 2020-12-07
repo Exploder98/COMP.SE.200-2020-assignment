@@ -28,11 +28,6 @@ describe("integration/chunk", () => {
             .toStrictEqual([["a", "b"], ["c", "d"]]);
     });
 
-    it("[\"a\", \"b\", \"c\", \"d\"], \"kaksi\" -> [[\"a\", \"b\"], [\"c\", \"d\"]]", () => {
-        expect(chunk(["a", "b", "c", "d"], "kaksi" ))
-            .toStrictEqual([["a", "b"], ["c", "d"]]);
-    });
-
     it("[\"a\", \"b\", \"c\", \"d\"], 3 -> [[\"a\", \"b\", \"c\"], [\"d\"]]", () => {
         expect(chunk(["a", "b", "c", "d"], 3 ))
             .toStrictEqual([["a", "b", "c"], [ "d"]]);
