@@ -14,10 +14,10 @@ jest.mock("../../src/toString.js");
 describe("unit/capitalize", () => {
     toString.mockImplementation(value => String(value));
 
-    it("\" moivaan\" -> \"Moivaan\"", () => {
-        upperFirst.mockReturnValueOnce("Moivaan");
+    it("\" moivaan\" -> \" moivaan\"", () => {
+        upperFirst.mockReturnValueOnce(" moivaan");
         expect(capitalize(" moivaan"))
-            .toBe("Moivaan");
+            .toBe(" moivaan");
     });
     it("\"tämä ei TOIMI\" -> \"Tämä ei toimi\"", () => {
         upperFirst.mockReturnValueOnce("Tämä ei toimi");
@@ -34,19 +34,19 @@ describe("unit/capitalize", () => {
         expect(capitalize(NaN))
             .toBe("Nan");
     });
-    it("undefined -> \"\"", () => {
-        upperFirst.mockReturnValueOnce("");
+    it("undefined -> \"Undefined\"", () => {
+        upperFirst.mockReturnValueOnce("Undefined");
         expect(capitalize(undefined))
-            .toBe("");
+            .toBe("Undefined");
     });
     it("null -> \"Null\"", () => {
         upperFirst.mockReturnValueOnce("Null");
         expect(capitalize(null))
             .toBe("Null");
     });
-    it("\"asdf & moi\" -> \"Asdf moi\"", () => {
-        upperFirst.mockReturnValueOnce("Asdf moi");
+    it("\"asdf & moi\" -> \"Asdf & moi\"", () => {
+        upperFirst.mockReturnValueOnce("Asdf & moi");
         expect(capitalize("asdf & moi"))
-            .toBe("Asdf moi");
+            .toBe("Asdf & moi");
     });
 });
