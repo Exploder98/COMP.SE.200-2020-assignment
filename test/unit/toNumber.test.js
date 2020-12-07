@@ -89,9 +89,9 @@ describe("unit/toNumber", () => {
             .toBe(NaN);
     });
 
-    it("null-> NaN", () => {
+    it("null-> 0", () => {
         expect(toNumber(null))
-            .toBe(NaN);
+            .toBe(0);
     });
 
     it("true-> 1", () => {

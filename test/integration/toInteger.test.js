@@ -43,19 +43,19 @@ describe("integration/toInteger", () => {
             .toBe(0);
     });
 
-    it("null -> NaN", () => {
+    it("null -> 0", () => {
         expect(toInteger(null))
-            .toBe(NaN);
+            .toBe(0);
     });
 
-    it("undefined -> NaN", () => {
+    it("undefined -> 0", () => {
         expect(toInteger(undefined))
-            .toBe(NaN);
+            .toBe(0);
     });
 
-    it("NaN -> NaN", () => {
+    it("NaN -> 0", () => {
         expect(toInteger(NaN))
-            .toBe(NaN);
+            .toBe(0);
     });
 
     it("true -> 1", () => {
@@ -68,8 +68,8 @@ describe("integration/toInteger", () => {
             .toBe(0);
     });
 
-    it("\"a\" -> NaN", () => {
+    it("\"a\" -> 0", () => {
         expect(toInteger("a"))
-            .toBe(NaN);
+            .toBe(0);
     });
 });

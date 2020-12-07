@@ -54,22 +54,22 @@ describe("unit/toInteger", () => {
             .toBe(0);
     });
 
-    toFinite.mockReturnValueOnce(NaN);
-    it("null -> NaN", () => {
+    toFinite.mockReturnValueOnce(0);
+    it("null -> 0", () => {
         expect(toInteger(null))
-            .toBe(NaN);
+            .toBe(0);
     });
 
-    toFinite.mockReturnValueOnce(NaN);
-    it("undefined -> NaN", () => {
+    toFinite.mockReturnValueOnce(0);
+    it("undefined -> 0", () => {
         expect(toInteger(undefined))
-            .toBe(NaN);
+            .toBe(0);
     });
 
-    toFinite.mockReturnValueOnce(NaN);
-    it("NaN -> NaN", () => {
+    toFinite.mockReturnValueOnce(0);
+    it("NaN -> 0", () => {
         expect(toInteger(NaN))
-            .toBe(NaN);
+            .toBe(0);
     });
 
     toFinite.mockReturnValueOnce(1);
@@ -84,9 +84,9 @@ describe("unit/toInteger", () => {
             .toBe(0);
     });
 
-    toFinite.mockReturnValueOnce(NaN);
-    it("\"a\" -> NaN", () => {
+    toFinite.mockReturnValueOnce(0);
+    it("\"a\" -> 0", () => {
         expect(toInteger("a"))
-            .toBe(NaN);
+            .toBe(0);
     });
 });

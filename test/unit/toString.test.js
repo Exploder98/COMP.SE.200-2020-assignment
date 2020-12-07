@@ -24,15 +24,15 @@ describe("unit/toString", () => {
     });
 
     isSymbol.mockReturnValueOnce(false);
-    it("null -> \"\"", () => {
+    it("null -> \"null\"", () => {
         expect(toString(null))
-            .toBe("");
+            .toBe("null");
     });
 
     isSymbol.mockReturnValueOnce(false);
-    it("undefined -> \"\"", () => {
+    it("undefined -> \"undefined\"", () => {
         expect(toString(undefined))
-            .toBe("");
+            .toBe("undefined");
     });
 
     isSymbol.mockReturnValueOnce(false);
@@ -53,15 +53,15 @@ describe("unit/toString", () => {
     });
 
     isSymbol.mockReturnValueOnce(false);
-    it("Infinity -> \"\"", () => {
+    it("Infinity -> \"Infinity\"", () => {
         expect(toString(Infinity))
-            .toBe("∞");
+            .toBe("Infinity");
     });
 
     isSymbol.mockReturnValueOnce(false).mockReturnValueOnce(false).mockReturnValueOnce(false);
-    it("[1, 2, 3] -> \"1, 2, 3\"", () => {
+    it("[1, 2, 3] -> \"1,2,3\"", () => {
         expect(toString([1, 2, 3]))
-            .toBe("1, 2, 3");
+            .toBe("1,2,3");
     });
 
     isSymbol.mockReturnValueOnce(true).mockReturnValueOnce(true);
@@ -70,8 +70,8 @@ describe("unit/toString", () => {
             .toBe("Symbol(test)");
     });
 
-    it("{\"a\": 1} -> \"{\'a\': 1}\"", () => {
+    it("{\"a\": 1} -> \"[object Object]\"", () => {
         expect(toString({"a": 1}))
-            .toBe("{'a': 1}");
+            .toBe("[object Object]");
     });
 });
