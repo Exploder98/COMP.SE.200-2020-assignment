@@ -9,7 +9,7 @@ import castArray from "../../src/castArray.js";
 describe("unit/castArray", () => {
     it("(tyhjä) -> []", () => {
         expect(castArray())
-            .toStrictEqual([]);
+            .toStrictEqual([undefined]);
     });
 
     it("1, 2, 3 -> [1, 2, 3]", () => {
@@ -45,5 +45,8 @@ describe("unit/castArray", () => {
     it("[1, 2, 3] -> [1, 2, 3]", () => {
         expect(castArray([1, 2, 3]))
             .toStrictEqual([1, 2, 3]);
+        const arr = [1, 2, 3];
+        expect(castArray(arr))
+            .toBe(arr);
     });
 });
