@@ -68,15 +68,21 @@ describe("unit/drop", () => {
             .toStrictEqual([1, 2, 3]);
     });
 
-    it("Dropataan \"two\" alkiota", () => {
-        toInteger.mockReturnValueOnce(2);
-        expect(drop([1, 2, 3], "two"))
-            .toStrictEqual([3]);
-    });
-
     it("Dropataan alkioita objektista", () => {
         toInteger.mockReturnValueOnce(2);
         expect(drop({}, 2))
+            .toStrictEqual([]);
+    });
+
+    it("Dropataan null-objektista", () => {
+        toInteger.mockReturnValueOnce(0);
+        expect(drop(null, 0))
+            .toStrictEqual([]);
+    });
+
+    it("Dropataan null-objektista -1 alkiota", () => {
+        toInteger.mockReturnValueOnce(-1);
+        expect(drop(null, -1))
             .toStrictEqual([]);
     });
 });

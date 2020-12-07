@@ -38,13 +38,18 @@ describe("integration/drop", () => {
             .toStrictEqual([]);
     });
 
-    it("Dropataan \"two\" alkiota", () => {
-        expect(drop([1, 2, 3], "two"))
-            .toStrictEqual([3]);
-    });
-
     it("Dropataan alkioita objektista", () => {
         expect(drop({}, 2))
+            .toStrictEqual([]);
+    });
+
+    it("Dropataan null-objektista", () => {
+        expect(drop(null, 0))
+            .toStrictEqual([]);
+    });
+
+    it("Dropataan null-objektista -1 alkiota", () => {
+        expect(drop(null, -1))
             .toStrictEqual([]);
     });
 });
