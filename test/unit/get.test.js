@@ -34,4 +34,24 @@ describe("unit/get", () => {
         expect(get(object, "a[1]", "get"))
             .toStrictEqual("rekt");
     });
+
+    it("null, \"a[1]\", \"get\" -> \"get\"", () => {
+        expect(get(null, "a[1]", "get"))
+            .toStrictEqual("get");
+    });
+
+    it("null, \"a[1]\" -> rekt", () => {
+        expect(get(null, "a[1]"))
+            .toStrictEqual(undefined);
+    });
+
+    it("object, \"a[1]\" -> \"rekt\"", () => {
+        expect(get(object, "a[1]"))
+            .toStrictEqual("rekt");
+    });
+
+    it("object, \"a[2]\" -> undefined", () => {
+        expect(get(object, "a[2]"))
+            .toStrictEqual(undefined);
+    });
 });
