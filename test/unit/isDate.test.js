@@ -17,9 +17,9 @@ describe("unit/isDate", () => {
         return typeof value === 'object' && value !== null;
     });
 
-    it("Date() -> true", () => {
+    it("Date() -> false", () => {
         expect(isDate(Date()))
-            .toBe(true);
+            .toBe(false);
     });
 
     it("new Date -> true (dokumentaatioesimerkki)", () => {
