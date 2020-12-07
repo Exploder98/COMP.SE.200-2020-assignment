@@ -8,7 +8,7 @@ import capitalize from "../../src/capitalize.js";
 
 
 describe("integration/capitalize", () => {
-    it("\" moivaan\" -> \"Moivaan\"", () => {
+    it("\" moivaan\" -> \" moivaan\"", () => {
         expect(capitalize(" moivaan"))
             .toBe(" moivaan");
     });

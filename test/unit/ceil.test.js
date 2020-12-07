@@ -8,12 +8,12 @@ import ceil from "../../src/ceil.js";
 
 describe("unit/ceil", () => {
     it("1, -> 1", () => {
-        expect(ceil(1,))
+        expect(ceil(1))
             .toStrictEqual(1);
     });
 
     it("4.006, -> 5", () => {
-        expect(ceil(4.006,))
+        expect(ceil(4.006))
             .toStrictEqual(5);
     });
 
@@ -28,22 +28,22 @@ describe("unit/ceil", () => {
     });
 
     it("-1.2, -> -1", () => {
-        expect(ceil(-1.2,))
+        expect(ceil(-1.2))
             .toStrictEqual(-1);
     });
 
     it("undefined, -> NaN", () => {
-        expect(ceil(undefined,))
+        expect(ceil(undefined))
             .toStrictEqual(NaN);
     });
 
     it("null, -> NaN", () => {
-        expect(ceil(null,))
-            .toStrictEqual(NaN);
+        expect(ceil(null))
+            .toBe(0);
     });
 
     it("NaN, -> NaN", () => {
-        expect(ceil(NaN,))
+        expect(ceil(NaN))
             .toStrictEqual(NaN);
     });
 });
