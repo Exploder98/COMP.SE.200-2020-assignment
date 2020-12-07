@@ -93,4 +93,44 @@ describe("unit/isEmpty", () => {
         expect(isEmpty(function() {return arguments}()))
             .toBe(true);
     });
+    isArrayLike.mockReturnValue(false);
+    isBuffer.mockReturnValue(false);
+    isTypedArray.mockReturnValue(false);
+    isArguments.mockReturnValue(false);
+    it("new Map() -> true", () => {
+        expect(isEmpty(new Map()))
+            .toBe(true);
+    });
+
+    it("Mapissa on tavaraa -> false", () => {
+        const map = new Map();
+        map.set("vastaus kaikkeen", 42);
+        expect(isEmpty(map))
+            .toBe(false);
+    });
+
+    it("new Set() -> true", () => {
+        expect(isEmpty(new Set()))
+            .toBe(true);
+    });
+
+    it("Setissä on tavaraa -> false", () => {
+        const set = new Set();
+        set.add(42);
+        expect(isEmpty(set))
+            .toBe(false);
+    });
+
+    it("tyhjä Prototype -> true", () => {
+        function Proto(){};
+        expect(isEmpty(Proto.prototype))
+            .toBe(true);
+    });
+
+    it("Prototypessä on tavaraa -> false", () => {
+        function Proto2(apinaa){this.value = apinaa};
+        Proto2.prototype.value = "koijataan";
+        expect(isEmpty(Proto2.prototype))
+            .toBe(false);
+    });
 });
