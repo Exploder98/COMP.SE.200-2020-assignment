@@ -28,6 +28,11 @@ describe("unit/words", () => {
             .toStrictEqual(["Eerik", "&", "Esko"]);
     });
 
+    it("\"eErIk ja ESKO\" -> [\"e\", \"Er\", \"Ik\", \"ja\", \"ESKO\"]", () => {
+        expect(words("eErIk ja ESKO"))
+            .toStrictEqual(["e", "Er", "Ik", "ja", "ESKO"]);
+    });
+
     it("null -> []", () => {
         expect(words(null))
             .toStrictEqual([]);
